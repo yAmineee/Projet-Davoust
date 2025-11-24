@@ -84,7 +84,7 @@ def tri_lettre_index_inexact(liste_mots: list[str], liste_char: list[str]) -> li
     count = 0
     for mot in liste_mots:
         for char in liste_char:
-            if mot.__contains__(char):
+            if char in mot:
                 count += 1
                 if count == len(liste_char):  # Si on atteint la fin de la liste de char
                     mots_potentiel.append(mot)
@@ -116,7 +116,7 @@ def tri_lettre_inexact(liste_mots: list[str], liste_char: list[str]) -> list[str
     for mot in liste_mots:
         for char in liste_char:
             count += 1
-            if mot.__contains__(char):
+            if char in mot:
                 break
             else:
                 if count == len(liste_char):
